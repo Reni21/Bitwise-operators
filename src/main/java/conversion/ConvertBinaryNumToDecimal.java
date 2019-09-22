@@ -1,4 +1,4 @@
-package convertation_binary_num;
+package conversion;
 
 import java.util.Scanner;
 
