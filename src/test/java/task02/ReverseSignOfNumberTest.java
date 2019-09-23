@@ -15,11 +15,13 @@ public class ReverseSignOfNumberTest {
 
     @Test
     public void shouldReturnNegativeNumberWhenArgumentPositive() {
-        assertEquals(-7, instance.reverseSign(7));
+        int res = instance.reverseSign(7);
+        assertEquals(-7, res);
     }
 
     @Test
     public void shouldReturnPositiveNumberWhenArgumentNegative() {
-        assertEquals(13, instance.reverseSign(-13));
+        int res = instance.reverseSign(-13);
+        assertEquals(13, res);
     }
 }
