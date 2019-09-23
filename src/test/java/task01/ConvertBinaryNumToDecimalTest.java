@@ -20,12 +20,14 @@ public class ConvertBinaryNumToDecimalTest {
 
     @Test
     public void shouldReturnPositiveDecimalNumberWhenValidStringLengthLessThenThirtyTwo() {
-        assertEquals(31, instance.convertToDecimal("11111"));
+        int res = instance.convertToDecimal("11111");
+        assertEquals(31, res);
     }
 
     @Test
     public void shouldReturnNegativeDecimalNumberWhenValidStringStartFromOneWithLengthThirtyTwo() {
-        assertEquals(-12, instance.convertToDecimal("11111111111111111111111111110100"));
+        int res = instance.convertToDecimal("11111111111111111111111111110100");
+        assertEquals(-12, res);
     }
 
     @Test
