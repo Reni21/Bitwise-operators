@@ -9,9 +9,6 @@ import task04.util.MathOperationsUtil;
 public class CommonEuclideanAlgorithm {
     private MathOperationsUtil mathUtil;
 
-    public CommonEuclideanAlgorithm() {
-    }
-
     public CommonEuclideanAlgorithm(MathOperationsUtil mathUtil) {
         this.mathUtil = mathUtil;
     }

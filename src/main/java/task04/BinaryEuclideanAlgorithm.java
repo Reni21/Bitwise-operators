@@ -9,18 +9,14 @@ import task04.util.MathOperationsUtil;
 public class BinaryEuclideanAlgorithm {
     private MathOperationsUtil mathUtil;
 
-    public BinaryEuclideanAlgorithm() {
-    }
-
     public BinaryEuclideanAlgorithm(MathOperationsUtil mathUtil) {
         this.mathUtil = mathUtil;
     }
 
     public static void main(String[] args) {
         BinaryEuclideanAlgorithm algorithm = new BinaryEuclideanAlgorithm(new MathOperationsUtil());
+        System.out.println(algorithm.findGCF(39, 65));
 
-
-        System.out.println(algorithm.findGCF(135, 45));
 //        System.out.println(algorithm.findGCF(12, 8)); // 4
 //        System.out.println(algorithm.findGCF(13, 15)); // 1
 //        System.out.println(algorithm.findGCF(0, 8)); // 0
