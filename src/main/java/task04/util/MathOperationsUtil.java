@@ -1,46 +1,41 @@
 package task04.util;
 
 public class MathOperationsUtil {
-    public int subtract(int max, int min) {
-        System.out.println("substract пришло: max=" + max + " min=" + min);
-        while (min != 0) {
-            int borrow = (~max) & min;
-            max = max ^ min;
-            min = borrow << 1;
+    public int subtract(int minuend, int subtrahend) {
+        if(minuend == 0){
+            return reverseSign(subtrahend);
         }
-        System.out.println("substract вернулось: return=" + max);
-        System.out.println();
-        return max;
+        while (subtrahend != 0) {
+            int borrow = (~minuend) & subtrahend;
+            minuend = minuend ^ subtrahend;
+            subtrahend = borrow << 1;
+        }
+        return minuend;
     }
 
-    public int multiply(int a, int b) {
-        System.out.println("multiply пришло: a=" + a + " b=" + b);
+    public int multiply(int multiplicand, int factor) {
+        if (multiplicand < 0 && factor < 0){
+            multiplicand = reverseSign(multiplicand);
+            factor = reverseSign(factor);
+        }
         int res = 0;
         int count = 0;
-        while (b > 0) {
-            if (b % 2 == 1) {
-                res = sum(res, a << count);
+        while (factor > 0) {
+            if (factor % 2 == 1) {
+                res = sum(res, multiplicand << count);
             }
             count = -(~count);
-            b >>= 1;
+            factor >>= 1;
         }
-        System.out.println("multiply вернулось: res=" + res);
-        System.out.println();
         return res;
     }
 
-    public int sum(int a, int b) {
-        System.out.println("sum пришло: a=" + a + " b=" + b);
-        if(b == 0){
-            System.out.println("sum вернулось: return=" + a);
-            System.out.println();
-            return a;
-        }else {
-            int s = sum(a ^ b, (a & b) << 1);
-            System.out.println("sum вернулось: return=" + s);
-            System.out.println();
-            return s;
-        }
-        //return b == 0 ? a : sum(a ^ b, (a & b) << 1);
+    public int sum(int termOne, int termTwo) {
+        return termTwo == 0 ? termOne : sum(termOne ^ termTwo, (termOne & termTwo) << 1);
     }
+
+    private int reverseSign(int number) {
+        return -(~(~number));
+    }
+
 }

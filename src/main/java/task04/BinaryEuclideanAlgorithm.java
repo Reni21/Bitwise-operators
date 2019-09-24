@@ -5,7 +5,6 @@ import task04.util.MathOperationsUtil;
 /**
  * Realisation of binary Euclidean Algorithm with bitwise operations
  */
-
 public class BinaryEuclideanAlgorithm {
     private MathOperationsUtil mathUtil;
 
@@ -15,13 +14,12 @@ public class BinaryEuclideanAlgorithm {
 
     public static void main(String[] args) {
         BinaryEuclideanAlgorithm algorithm = new BinaryEuclideanAlgorithm(new MathOperationsUtil());
-        System.out.println(algorithm.findGCF(39, 65));
 
-//        System.out.println(algorithm.findGCF(12, 8)); // 4
-//        System.out.println(algorithm.findGCF(13, 15)); // 1
-//        System.out.println(algorithm.findGCF(0, 8)); // 0
-//        System.out.println(algorithm.findGCF(12, -8)); // 4
-//        System.out.println(algorithm.findGCF(8, 1)); // 1
+        System.out.println(algorithm.findGCF(12, 8)); // 4
+        System.out.println(algorithm.findGCF(13, 15)); // 1
+        System.out.println(algorithm.findGCF(0, 8)); // 0
+        System.out.println(algorithm.findGCF(12, -8)); // 4
+        System.out.println(algorithm.findGCF(8, 1)); // 1
     }
 
     public int findGCF(int a, int b) { // Greatest Common Factor
@@ -29,8 +27,8 @@ public class BinaryEuclideanAlgorithm {
             return a == 0 ? a : b;
         }
         if (a < 0 || b < 0) {
-            a = a < 0 ? mathUtil.sum(~a, 1) : a; // sign inversion
-            b = b < 0 ? mathUtil.sum(~b, 1) : b; // sign inversion
+            a = a < 0 ? -(~(~a)) : a; // sign inversion
+            b = b < 0 ? -(~(~b)) : b;
         }
 
         int temp = 1;
