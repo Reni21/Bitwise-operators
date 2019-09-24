@@ -2,7 +2,7 @@ package task04.util;
 
 public class MathOperationsUtil {
     public int subtract(int minuend, int subtrahend) {
-        if(minuend == 0){
+        if (minuend == 0) {
             return reverseSign(subtrahend);
         }
         while (subtrahend != 0) {
@@ -14,7 +14,7 @@ public class MathOperationsUtil {
     }
 
     public int multiply(int multiplicand, int factor) {
-        if (multiplicand < 0 && factor < 0){
+        if (multiplicand < 0 && factor < 0) {
             multiplicand = reverseSign(multiplicand);
             factor = reverseSign(factor);
         }
@@ -37,5 +37,4 @@ public class MathOperationsUtil {
     private int reverseSign(int number) {
         return -(~(~number));
     }
-
 }

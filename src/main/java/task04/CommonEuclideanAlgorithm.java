@@ -27,11 +27,11 @@ public class CommonEuclideanAlgorithm {
         if (a == 0 || b == 0) {
             return a == 0 ? a : b;
         }
-        if(a < 0 || b < 0){
+        if (a < 0 || b < 0) {
             a = a < 0 ? -(~(~a)) : a; // sign inversion
             b = b < 0 ? -(~(~b)) : b; // sign inversion
         }
-        while ((a^b) != 0) { // a != b
+        while ((a ^ b) != 0) { // a != b
             if (a > b) {
                 a = mathUtil.subtract(a, b);
             } else {
@@ -40,6 +40,4 @@ public class CommonEuclideanAlgorithm {
         }
         return a;
     }
-
-
 }

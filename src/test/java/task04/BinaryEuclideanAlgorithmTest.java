@@ -24,28 +24,28 @@ public class BinaryEuclideanAlgorithmTest {
     }
 
     @Test
-    public void shouldFindGreatestCommonFactorForAnyIntegerNumber(){
+    public void shouldFindGreatestCommonFactorForAnyIntegerNumber() {
         when(util.subtract(65, 39)).thenReturn(26);
         when(util.subtract(39, 13)).thenReturn(26);
-        when(util.multiply(1,13)).thenReturn(13);
+        when(util.multiply(1, 13)).thenReturn(13);
 
         int res = instance.findGCF(39, -65);
         assertEquals(13, res);
     }
 
     @Test
-    public void shouldReturnOneWhenArgumentHaveNotAnyGreatestCommonFactor(){
+    public void shouldReturnOneWhenArgumentHaveNotAnyGreatestCommonFactor() {
         when(util.subtract(15, 13)).thenReturn(2);
         when(util.subtract(13, 1)).thenReturn(12);
         when(util.subtract(3, 1)).thenReturn(2);
-        when(util.multiply(1,1)).thenReturn(1);
+        when(util.multiply(1, 1)).thenReturn(1);
 
         int res = instance.findGCF(13, 15);
         assertEquals(1, res);
     }
 
     @Test
-    public void shouldReturnZeroWhenAnyOfArgumentsIsZero(){
+    public void shouldReturnZeroWhenAnyOfArgumentsIsZero() {
         int res = instance.findGCF(0, 65);
         assertEquals(0, res);
     }
