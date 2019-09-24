@@ -5,10 +5,17 @@ package task03;
  * Using bitwise operations, count the number of occupied bits for byte, short, int, long.
  */
 public class NumberOfBitsInDataType {
-    private CountBitsService service = new CountBitsService();
+    private CountBitsService service;
+
+    public NumberOfBitsInDataType() {
+    }
+
+    public NumberOfBitsInDataType(CountBitsService service) {
+        this.service = service;
+    }
 
     public static void main(String[] args) {
-        NumberOfBitsInDataType instance = new NumberOfBitsInDataType();
+        NumberOfBitsInDataType instance = new NumberOfBitsInDataType(new CountBitsService());
 
         System.out.println("long use " + instance.countBitsInDataType(255L) + " bits"); // 64
         System.out.println("byte use " + instance.countBitsInDataType((byte) 2) + " bits"); // 8
