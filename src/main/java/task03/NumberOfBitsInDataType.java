@@ -7,9 +7,6 @@ package task03;
 public class NumberOfBitsInDataType {
     private CountBitsService service;
 
-    public NumberOfBitsInDataType() {
-    }
-
     public NumberOfBitsInDataType(CountBitsService service) {
         this.service = service;
     }

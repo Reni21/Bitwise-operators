@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.Assert.*;
@@ -19,12 +21,13 @@ public class NumberOfBitsInDataTypeTest {
 
     @Before
     public void setUp() throws Exception {
-        this.instance = new NumberOfBitsInDataType();
+        this.instance = new NumberOfBitsInDataType(this.service);
     }
+
 
     @Test
     public void shouldCountNumberOfBitsInAllIntegerDataTypes() {
-        when(service.countBitsInPositiveNumber(Short.MAX_VALUE)).thenReturn(15);
+        Mockito.when(service.countBitsInPositiveNumber(Short.MAX_VALUE)).thenReturn(15);
         int res = instance.countBitsInDataType((short) 7);
         assertEquals(16, res);
     }
