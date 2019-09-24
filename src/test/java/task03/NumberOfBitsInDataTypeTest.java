@@ -22,7 +22,6 @@ public class NumberOfBitsInDataTypeTest {
         this.instance = new NumberOfBitsInDataType(this.service);
     }
 
-
     @Test
     public void shouldCountNumberOfBitsInAllIntegerDataTypes() {
         Mockito.when(service.countBitsInPositiveNumber(Short.MAX_VALUE)).thenReturn(15);

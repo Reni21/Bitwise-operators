@@ -36,6 +36,6 @@ public class NumberOfBitsInDataType {
             bitsInNumber = this.service.countBitsInPositiveNumber(Byte.MAX_VALUE);
             return -(~bitsInNumber);
         }
-        throw new IllegalArgumentException("Incorrect number format. Number shouldn't be fractional");
+        throw new IllegalArgumentException("Incorrect number format. Number shouldn't be fractional type");
     }
 }
