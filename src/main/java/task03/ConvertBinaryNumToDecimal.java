@@ -1,4 +1,4 @@
-package conversion;
+package task03;
 
 import java.util.Scanner;
 
@@ -36,4 +36,5 @@ public class ConvertBinaryNumToDecimal {
     private static boolean isBinaryNum(String binaryNum) {
        return binaryNum.chars().allMatch(x -> x == '0' || x == '1');
     }
+
 }
