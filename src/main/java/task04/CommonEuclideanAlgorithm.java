@@ -40,4 +40,5 @@ public class CommonEuclideanAlgorithm {
         }
         return a;
     }
+
 }

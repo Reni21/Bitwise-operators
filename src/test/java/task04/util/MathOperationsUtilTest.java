@@ -48,4 +48,5 @@ public class MathOperationsUtilTest {
         int res = instance.sum(-4, 2);
         assertEquals(-2, res);
     }
+
 }

@@ -49,4 +49,5 @@ public class BinaryEuclideanAlgorithmTest {
         int res = instance.findGCF(0, 65);
         assertEquals(0, res);
     }
+
 }
