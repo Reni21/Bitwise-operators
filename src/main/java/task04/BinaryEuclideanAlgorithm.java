@@ -53,5 +53,4 @@ public class BinaryEuclideanAlgorithm {
         }
         return a == 0 ? mathUtil.multiply(temp, b) : mathUtil.multiply(temp, a);
     }
-
 }
