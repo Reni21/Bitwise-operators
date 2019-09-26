@@ -1,4 +1,4 @@
-package euclidean_algorithm;
+package task04;
 
 /**
  * Realisation of binary Euclidean Algorithm with bitwise operations
