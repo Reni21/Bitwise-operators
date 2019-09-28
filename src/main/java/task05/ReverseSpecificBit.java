@@ -1,4 +1,4 @@
-package reverse_bit;
+package task05;
 
 /**
  * 5
